@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/header.ejs') %>
+    <main>
+        <form action="/productCart" method="post">
+            <div class="carrito">
+                <h3>Carrito de compras</h3>
+                <img src=<%= carrito[0].imagen %> alt="">
+            </div>
+            <div class="nombre-precio">
+                <p class="nombre-planta"> <%= carrito[0].nombre %> </p>
+                <h4 class="precio-planta"> <%= carrito[0].precio %> </h4>
+            </div>
+            <div class="cantidad">
+                <input type="number" name="cantidad">
+            </div>
+            <div class="total">
+                <p>Total: X</p>
+            </div>
+            <br>
+            <button>Comprar</button>
+            <button>Ver mas productos</button> 
+        </form>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

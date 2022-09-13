@@ -16,6 +16,7 @@ app.use(express.json());                            //permite capturar datos env
 app.use('/',rutas);                                 // define ruteo
 
 
-app.listen(puerto, ()=>{
+var puerto=3000;
+app.listen(process.env.PORT || puerto, ()=>{
     console.log('Servidor funcionando en puerto '+puerto);
 });
